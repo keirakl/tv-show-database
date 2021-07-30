@@ -1,0 +1,11 @@
+p {
+    margin-bottom: 0.3rem;
+}
+
+.hover-cursor {
+    cursor: pointer;
+}
+
+.hover-text-color:hover{
+    color: #0D6EFD;
+}
