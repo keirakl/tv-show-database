@@ -17,7 +17,7 @@ class SearchResult extends React.Component {
     render() {
         const {results} = this.props;
         return (
-            <Container className="" >
+            <Container className="my-3" >
                 {results ? 
                     (results.length > 0 ?
                         <Container>
@@ -53,9 +53,9 @@ class SearchResult extends React.Component {
                                     />
                             </Row>
                         </Container>
-                        : <p>{`Cannot find a match for "${this.props.searchTerm}"`}</p>
+                        : <p className="small-print">{`Cannot find a match for "${this.props.searchTerm}"`}</p>
                     )
-                    : ""
+                    : "Search TV shows by their titles. The shows will still be found even if your query contains small typos. Results are returned in order of relevancy (best matches on top).Credit to TVMaze API."
                 }
             </Container>
         )

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, InputGroup, FormControl, Navbar, Col, Row } from "react-bootstrap";
+import { Button, Container, InputGroup, FormControl, Col, Row } from "react-bootstrap";
 import '../style.css';
 
 class SearchBar extends React.Component {
@@ -42,26 +42,26 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-          <Navbar className="d-flex flex-column search-bar">
-            <Container>
-              <Col xs={12} sm={5}>
-                <Navbar.Brand className="nav-brand">TV Show Database</Navbar.Brand>
+          <Container className="d-flex flex-column search-bar my-3">
+            <Row className="justify-content-center my-2">
+              <Col md="auto">
+                <h1 className="nav-brand">TV Show Database</h1>
               </Col>
-              <Col xs={12} sm={7}>
-                <Navbar.Collapse className="justify-content-end">
-                  <InputGroup className="mb-3">
-                    <FormControl
-                      placeholder="Search TV shows by title... "
-                      aria-label="title"
-                      onChange={e => { this.searchTerm = e.target.value; }}
-                      onKeyPress={this.onEnter}
-                    />
-                    <Button variant="outline-secondary" onClick={()=> this.handleSearch() }>Search</Button>
-                  </InputGroup>
-                </Navbar.Collapse>
+            </Row>
+            <Row>
+              <Col>
+                <InputGroup className="mb-3">
+                  <FormControl
+                    placeholder="Search TV shows by title... "
+                    aria-label="title"
+                    onChange={e => { this.searchTerm = e.target.value; }}
+                    onKeyPress={this.onEnter}
+                  />
+                  <Button variant="outline-secondary" onClick={()=> this.handleSearch() }>Search</Button>
+                </InputGroup>
               </Col>
-            </Container>
-          </Navbar>
+            </Row>
+          </Container>
         )
     }
 }

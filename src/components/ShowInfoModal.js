@@ -7,16 +7,15 @@ const ShowInfoModal = (props) => {
     const show = props.showInfo;
     return (
         <Modal show={props.showModal} onHide={() => props.closeModal()} size="lg" >
-            <Modal.Header closeButton>
-            </Modal.Header>
-            <Modal.Body>
+            <Modal.Header className="lightBackground" closeButton />
+            <Modal.Body className="lightBackground">
                 {show?
                     <Container>
                         <Row>
                             <h1>{show.name}</h1>
                         </Row>
                         <Row>
-                            <Col sm="auto">
+                            <Col md="auto">
                                 {show.image? <Image style={{maxWidth: 400}} src={show.image.original} fluid /> : "" }
                             </Col>
                             <Col>
