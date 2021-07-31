@@ -7,10 +7,14 @@ class SearchBar extends React.Component {
         super(props);
 
         this.state = {
-        }
+
+        };
+
+        this.onEnter = this.onEnter.bind(this);
     }
 
     handleSearch = () => {
+        this.props.searchTerm(this.searchTerm); 
         let url = `https://api.tvmaze.com/search/shows?q=${this.searchTerm}`;
 
         fetch(url, {
@@ -29,6 +33,13 @@ class SearchBar extends React.Component {
         });
     }
 
+    onEnter = ( e ) => {
+      if (e.charCode === 13) {
+        this.searchTerm = e.target.value;
+        this.handleSearch();
+      }
+    }
+
     render() {
         return (
           <Container className="d-flex m-25 flex-column vh-100">
@@ -42,8 +53,9 @@ class SearchBar extends React.Component {
                       placeholder="Search TV shows by title... "
                       aria-label="title"
                       onChange={e => { this.searchTerm = e.target.value; }}
+                      onKeyPress={this.onEnter}
                     />
-                    <Button variant="outline-secondary" onClick={()=> { this.handleSearch(); this.props.searchTerm(this.searchTerm) }}>Search</Button>
+                    <Button variant="outline-secondary" onClick={()=> this.handleSearch() }>Search</Button>
                   </InputGroup>
                 </Navbar.Collapse>
               </Container>

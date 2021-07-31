@@ -5,7 +5,6 @@ import './style.css';
 
 const ShowInfoModal = (props) => {
         const show = props.showInfo;
-        console.log(show);
         return (
             <Modal show={props.showModal} onHide={() => props.closeModal()} size="lg" >
                 <Modal.Header closeButton>
@@ -45,7 +44,7 @@ const ShowInfoModal = (props) => {
                                         }
                                         {show.officialSite?
                                             <ListGroup.Item>
-                                                <p>Website: <a href={show.officialSite} target="_blank">{show.officialSite}</a></p>
+                                                <p>Website: <a href={show.officialSite} target="_blank" rel="noreferrer">{show.officialSite}</a></p>
                                             </ListGroup.Item>  
                                             : ""
                                         }
@@ -63,7 +62,7 @@ const ShowInfoModal = (props) => {
                                         }
                                         {show.url?
                                             <ListGroup.Item>
-                                                <a href={show.url} target="_blank">Read more...</a>
+                                                <a href={show.url} target="_blank" rel="noreferrer">Read more...</a>
                                             </ListGroup.Item>   
                                             : ""
                                         }

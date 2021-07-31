@@ -9,3 +9,9 @@ p {
 .hover-text-color:hover{
     color: #0D6EFD;
 }
+
+.small-print {
+    font-size: 12px;
+    font-style: italic;
+    color: #848488;
+}

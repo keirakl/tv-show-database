@@ -14,9 +14,8 @@ class Home extends React.Component {
     }
 
     render() {
-      console.log(this.state.data);
         return (
-          <Container className="d-flex m-25 flex-column vh-100">
+          <Container className="d-flex m-25 flex-column vh-100 ">
             <SearchBar data={(data) => this.setState({data})} searchTerm={(searchTerm) => this.setState({searchTerm})}/>
             <SearchResult results={this.state.data} searchTerm={this.state.searchTerm}/>
           </Container>
