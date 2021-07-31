@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Container, InputGroup, FormControl, Navbar } from "react-bootstrap";
-import './style.css';
+import { Button, Container, InputGroup, FormControl, Navbar, Col, Row } from "react-bootstrap";
+import '../style.css';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -42,11 +42,12 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-          <Container className="d-flex m-25 flex-column vh-100">
-            <Navbar>
-              <Container>
-                <Navbar.Brand href="#home">TV Show Database</Navbar.Brand>
-                <Navbar.Toggle />
+          <Navbar className="d-flex flex-column search-bar">
+            <Container>
+              <Col xs={12} sm={5}>
+                <Navbar.Brand className="nav-brand">TV Show Database</Navbar.Brand>
+              </Col>
+              <Col xs={12} sm={7}>
                 <Navbar.Collapse className="justify-content-end">
                   <InputGroup className="mb-3">
                     <FormControl
@@ -58,9 +59,9 @@ class SearchBar extends React.Component {
                     <Button variant="outline-secondary" onClick={()=> this.handleSearch() }>Search</Button>
                   </InputGroup>
                 </Navbar.Collapse>
-              </Container>
-            </Navbar>
-          </Container>
+              </Col>
+            </Container>
+          </Navbar>
         )
     }
 }

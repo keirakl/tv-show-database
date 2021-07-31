@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, ListGroup, Modal } from "react-bootstrap";
 import Image from 'react-bootstrap/Image';
-import './style.css';
+import '../style.css';
 
 const ShowInfoModal = (props) => {
     const show = props.showInfo;
@@ -17,10 +17,7 @@ const ShowInfoModal = (props) => {
                         </Row>
                         <Row>
                             <Col sm="auto">
-                                {show.image?
-                                    <Image style={{maxWidth: 400}} src={show.image.original} fluid />
-                                    : ""
-                                    }
+                                {show.image? <Image style={{maxWidth: 400}} src={show.image.original} fluid /> : "" }
                             </Col>
                             <Col>
                                 <ListGroup variant="flush">
@@ -32,31 +29,31 @@ const ShowInfoModal = (props) => {
                                     }
                                     {show.genres.length > 0?
                                         <ListGroup.Item>
-                                            <p>Genres: {show.genres.map(genre => `${genre}, `)}...</p>
+                                            <p><b>Genres:</b> {show.genres.map(genre => `${genre}, `)}...</p>
                                         </ListGroup.Item>   
                                         : ""
                                     }
                                     {show.language?
                                         <ListGroup.Item>
-                                            <p>Language: {show.language}</p>
+                                            <p><b>Language:</b> {show.language}</p>
                                         </ListGroup.Item>  
                                         : ""
                                     }
                                     {show.officialSite?
                                         <ListGroup.Item>
-                                            <p>Website: <a href={show.officialSite} target="_blank" rel="noreferrer">{show.officialSite}</a></p>
+                                            <p><b>Website:</b> <a href={show.officialSite} target="_blank" rel="noreferrer">{show.officialSite}</a></p>
                                         </ListGroup.Item>  
                                         : ""
                                     }
                                     {show.premiered?
                                         <ListGroup.Item>
-                                            <p>Premiered on: {show.premiered}</p>
+                                            <p><b>Premiered on:</b> {show.premiered}</p>
                                         </ListGroup.Item>  
                                         : ""
                                     }
                                     {show.rating.average?
                                         <ListGroup.Item>
-                                            <p>Rating: {show.rating.average}</p>
+                                            <p><b>Rating:</b> {show.rating.average}/10</p>
                                         </ListGroup.Item>   
                                         : ""
                                     }

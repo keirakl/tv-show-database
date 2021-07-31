@@ -1,0 +1,56 @@
+p {
+    margin-bottom: 0.3rem;
+}
+
+ /* SearchBar Component */
+.nav-brand {
+    background-color: #5137e0;
+    padding: 10px;
+    border-radius: .25rem;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:hover {
+    color: #f7f6fc;
+}
+
+.form-control, .btn-outline-secondary {
+    border: #5137e0 2px solid;
+}
+
+.btn {
+    color: #5137e0;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #5137e0;
+}
+
+.navbar-collapse .mb-3 {
+    margin-bottom: 0!important;
+    height: 50px;
+}
+
+/* END. SearchBar Component */
+
+/* SearchResult Component */
+.hover-cursor {
+    cursor: pointer;
+}
+
+.hover-text-color:hover{
+    color: #0D6EFD;
+}
+
+.small-print {
+    font-size: 12px;
+    font-style: italic;
+    color: #848488;
+}
+
+/* END. SearchResult Component */
+
+/* Modal Component */
+/* .App {
+    background-color: #f7f6fc;
+} */
+/* END. Modal Component */

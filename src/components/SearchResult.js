@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, ListGroup } from "react-bootstrap";
 import Image from 'react-bootstrap/Image';
 import ShowInfoModal from "./ShowInfoModal";
-import './style.css';
+import '../style.css';
 
 class SearchResult extends React.Component {
     constructor(props) {
