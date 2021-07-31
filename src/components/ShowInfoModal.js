@@ -3,19 +3,11 @@ import { Container, Row, Col, ListGroup, Modal } from "react-bootstrap";
 import Image from 'react-bootstrap/Image';
 import './style.css';
 
-class ShowInfoModal extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-        }
-    }
-
-    render() {
-        const show = this.props.showInfo;
+const ShowInfoModal = (props) => {
+        const show = props.showInfo;
         console.log(show);
         return (
-            <Modal show={this.props.showModal} onHide={() => this.props.closeModal()} size="lg" >
+            <Modal show={props.showModal} onHide={() => props.closeModal()} size="lg" >
                 <Modal.Header closeButton>
                 </Modal.Header>
                 <Modal.Body>
@@ -86,6 +78,5 @@ class ShowInfoModal extends React.Component {
             </Modal>
         )
     }
-}
 
 export default ShowInfoModal;

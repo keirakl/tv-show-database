@@ -13,17 +13,9 @@ class SearchResult extends React.Component {
             showInfo: "",
         }
     }
-
-    renderShowModal = () => {
-        return <ShowInfoModal 
-            showModal={this.state.showModal} 
-            closeModal={() => this.setState({ showModal: false })}
-            showInfo={this.state.showInfo}
-            />
-    }
     
     render() {
-        const results = this.props.data;
+        const {results} = this.props;
         console.log(results);
         return (
             <Container className="" >
@@ -54,7 +46,13 @@ class SearchResult extends React.Component {
                                 })}
                             </ListGroup>
                         </Row>
-                        <Row>{this.renderShowModal()}</Row>
+                        <Row>
+                            <ShowInfoModal 
+                                showModal={this.state.showModal} 
+                                closeModal={() => this.setState({ showModal: false })}
+                                showInfo={this.state.showInfo}
+                                />
+                        </Row>
                     </Container>
                     : "" }
             </Container>
